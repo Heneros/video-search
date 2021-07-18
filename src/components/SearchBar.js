@@ -9,6 +9,8 @@ onInputChange = (event) =>{
 
 onFormSubmit = event =>{
     event.preventDefault();
+
+    this.props.onFormSubmit(this.state.term)
 };
 
   render(){
@@ -19,7 +21,7 @@ onFormSubmit = event =>{
                <input 
                type="text" 
                value={this.state.term}  
-               onChange={this.InputChange}
+               onChange={this.onInputChange}
                />
             </div>
           </form>
